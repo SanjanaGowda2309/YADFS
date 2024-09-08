@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Client Web Interface</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 20px;
+        background: linear-gradient(to right, #69acd0, #fbc2eb);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(225, 24, 114);
+        }
+
+        p {
+            color: #0a0a0a;
+            margin-top: 10px;
+        }
+    </style>
+        <p>Status: <span id="status">Checking...</span></p>
+        <button onclick="checkHeartbeat()">Check Heartbeat</button>
+    
+        <script>
+            function checkHeartbeat() {
+                fetch('/heartbeat')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusElement = document.getElementById('status');
+                        statusElement.textContent = data.status;
+                    })
+                    .catch(error => {
+                        console.error('Error checking heartbeat:', error);
+                    });
+            }
+        </script>
+</head>
+
+    <body>
+        <h1>DFS Client Web Interface</h1>
+
+        <!-- Register DataNode Form -->
+        <h2>Register DataNode</h2>
+        <form action="/register_data_node" method="post">
+            <label>DataNode ID:</label>
+            <input type="text" name="data_node_id" required>
+            <label>DataNode Address:</label>
+            <input type="text" name="data_node_address" required>
+            <label>DataNode Port:</label>
+            <input type="text" name="data_node_port" required>
+            <button type="submit">Register DataNode</button>
+        </form>
+
+        <!-- Create Directory Form -->
+        <h2>Create Directory</h2>
+        <form action="/create_directory" method="post">
+            <label>Parent Path:</label>
+            <input type="text" name="parent_path" required>
+            <label>Directory Name:</label>
+            <input type="text" name="directory_name" required>
+            <button type="submit">Create Directory</button>
+        </form>
+
+        <!-- Delete Directory Form -->
+        <h2>Delete Directory</h2>
+        <form action="/delete_directory" method="post">
+            <label>Directory Path:</label>
+            <input type="text" name="directory_path" required>
+            <button type="submit">Delete Directory</button>
+        </form>
+
+        <!-- Move File Form -->
+        <h2>Move File</h2>
+        <form action="/move_file" method="post">
+            <label>Source Path:</label>
+            <input type="text" name="source_path" required>
+            <label>Destination Path:</label>
+            <input type="text" name="destination_path" required>
+            <button type="submit">Move File</button>
+        </form>
+
+        <!-- Upload File Form -->
+        <h2>Upload File</h2>
+        <form action="/upload_file" method="post">
+            <label>Local Path:</label>
+            <input type="text" name="local_path" required>
+            <label>DFS Path:</label>
+            <input type="text" name="dfs_path" required>
+            <button type="submit">Upload File</button>
+        </form>
+
+        <!-- Download File Form -->
+        <h2>Download File</h2>
+        <form action="/download_file" method="post">
+            <label>DFS Path:</label>
+            <input type="text" name="dfs_path" required>
+            <label>Local Path:</label>
+            <input type="text" name="local_path" required>
+            <button type="submit">Download File</button>
+        </form>
+
+        <!-- Get Status Button -->
+        <h2>DFS Status</h2>
+        <form action="/get_status" method="get">
+            <button type="submit">Get DFS Status</button>
+        </form>
+     <!-- List Directory Contents Form -->
+        <h2>List Directory Contents</h2>
+        <form action="/list_directory_contents" method="post">
+            <label>DFS Path:</label>
+            <input type="text" name="dfs_path" required>
+            <button type="submit">List Directory Contents</button>
+        </form>
+            <!-- Traverse Directory Form -->
+        <h2>Traverse Directory</h2>
+        <form action="/traverse_directory" method="post">
+            <label>DFS Path:</label>
+            <input type="text" name="dfs_path" required>
+            <button type="submit">Traverse Directory</button>
+        </form>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        
+    </body>
+</html>

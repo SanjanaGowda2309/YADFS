@@ -1,0 +1,55 @@
+2023-11-20 22:25:04,618 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:25:09,404 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:25:26,177 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:25:26,185 [ERROR]: File '/sanju/moved_file.txt' not found in DFS.
+2023-11-20 22:30:41,077 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:30:51,106 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:30:58,728 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:30:58,740 [INFO]: Block 0 stored on DataNode 0
+2023-11-20 22:30:58,740 [INFO]: Block 0 stored on DataNode 1
+2023-11-20 22:30:58,740 [INFO]: Block 0 replicated to 1 DataNodes
+2023-11-20 22:30:58,741 [INFO]: Metadata for /helloo/file.txt stored in the 'metadata' dictionary
+2023-11-20 22:30:58,743 [INFO]: Block 0 information stored in the 'blocks' dictionary
+2023-11-20 22:30:58,747 [ERROR]: File '/hii/moved_file.txt' not found in DFS.
+2023-11-20 22:39:12,808 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:39:12,819 [INFO]: Block 0 stored on DataNode 0
+2023-11-20 22:39:12,820 [ERROR]: Insufficient data nodes for replication.
+2023-11-20 22:39:12,820 [INFO]: Metadata for /helloo/file.txt stored in the 'metadata' dictionary
+2023-11-20 22:39:12,821 [INFO]: Block 0 information stored in the 'blocks' dictionary
+2023-11-20 22:39:12,825 [ERROR]: File '/hii/moved_file.txt' not found in DFS.
+2023-11-20 22:39:39,198 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:39:48,947 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:39:56,175 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:39:56,185 [INFO]: Block 0 stored on DataNode 0
+2023-11-20 22:39:56,186 [INFO]: Block 0 stored on DataNode 1
+2023-11-20 22:39:56,186 [INFO]: Block 0 replicated to 1 DataNodes
+2023-11-20 22:39:56,187 [INFO]: Metadata for /helloo/file.txt stored in the 'metadata' dictionary
+2023-11-20 22:39:56,190 [INFO]: Block 0 information stored in the 'blocks' dictionary
+2023-11-20 22:39:56,195 [ERROR]: File '/hii/moved_file.txt' not found in DFS.
+2023-11-20 22:40:52,330 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:40:56,723 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:50:45,074 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:50:52,750 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:52:40,051 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:54:47,870 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 22:54:56,200 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 22:57:08,747 [INFO]: Block 0 stored on DataNode 0
+2023-11-20 22:57:08,747 [INFO]: Block 0 stored on DataNode 1
+2023-11-20 22:57:08,748 [INFO]: Block 0 replicated to 1 DataNodes
+2023-11-20 22:57:08,749 [INFO]: Metadata for /user/documents/still_not_working_3/file.txt stored in the 'metadata' dictionary
+2023-11-20 22:57:08,753 [INFO]: Block 0 information stored in the 'blocks' dictionary
+2023-11-20 22:58:04,198 [INFO]: File '/user/documents/still_not_working_3/file.txt' downloaded to local path 'C:\\Users\\Sampreethi Y\\Documents\\festtttt.txt' successfully.
+2023-11-20 23:31:33,848 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 23:31:38,824 [INFO]: DataNode 1 registered with NameNode
+2023-11-20 23:48:40,655 [INFO]: DataNode 0 registered with NameNode
+2023-11-20 23:48:49,946 [INFO]: DataNode 1 registered with NameNode
+2023-11-21 00:13:34,867 [INFO]: DataNode 0 registered with NameNode
+2023-11-21 00:13:46,063 [INFO]: DataNode 1 registered with NameNode
+2023-11-21 00:16:26,577 [INFO]: DataNode 0 registered with NameNode
+2023-11-21 00:16:31,100 [INFO]: DataNode 1 registered with NameNode
+2023-11-21 00:20:20,378 [INFO]: DataNode 0 registered with NameNode
+2023-11-21 00:20:29,615 [INFO]: DataNode 1 registered with NameNode
+2023-11-21 00:22:31,003 [INFO]: DataNode 0 registered with NameNode
+2023-11-21 00:22:40,822 [INFO]: DataNode 1 registered with NameNode
+2023-11-21 05:41:45,941 [INFO]: DataNode 0 registered with NameNode
+2023-11-21 05:41:50,694 [INFO]: DataNode 1 registered with NameNode
